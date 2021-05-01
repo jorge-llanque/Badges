@@ -1,12 +1,12 @@
 import React from "react";
 
-import "./styles/BadgeNew.css";
+import "./styles/BadgeEdit.css";
 import header from "../images/badge-header.svg";
 import Badge from "../components/Badge";
 import BadgeForm from "../components/BadgeForm";
 import Api from "../api";
 
-class BadgeNew extends React.Component {
+class BadgeEdit extends React.Component {
     state = {form:{
         firstName: "",
         lastName: "",
@@ -39,8 +39,8 @@ class BadgeNew extends React.Component {
     render(){
         return (
         <React.Fragment>
-            <div className="BadgeNew__hero">
-                <img className="BadgeNew__hero-image img-fluid" src={header} alt="logo" />
+            <div className="BadgeEdit__hero">
+                <img className="BadgeEdit__hero-image img-fluid" src={header} alt="logo" />
             </div>
             <div className="container">
                 <div className="row">
@@ -68,4 +68,4 @@ class BadgeNew extends React.Component {
     }
 }
 
-export default BadgeNew
+export default BadgeEdit
