@@ -1,19 +1,37 @@
 import React from "react";
-
 import "./styles/BadgeEdit.css";
 import header from "../images/badge-header.svg";
 import Badge from "../components/Badge";
 import BadgeForm from "../components/BadgeForm";
-import Api from "../api";
+import PageLoading from "../components/PageLoading";
+import api from "../api";
 
 class BadgeEdit extends React.Component {
-    state = {form:{
+    state = {
+        loading: true,
+        error: null,
+        form:{
         firstName: "",
         lastName: "",
         email: "",
         jobTitle: "",
         twitter: "",
     }};
+
+    componentDidMount(){
+        this.fetchData();
+    }
+
+    fetchData = async e => {
+        this.setState({loading: true, error: null});
+        
+        try {
+            const data = await api.badges.read(this.props.match.params.badgeId);
+            this.setState({loading: false, form: data});
+        } catch (error) {
+            this.setState({loading: false, error: error});
+        }
+    };
 
     handleChange = e => {
         this.setState({
@@ -26,21 +44,28 @@ class BadgeEdit extends React.Component {
     handleSubmit = async e => {
         e.preventDefault();
         this.setState({loading: true, error: null});
-
         try {
-            await Api.badges.create(this.state.form);
+            await api.badges.update(this.props.match.params.badgeId, this.state.form);
             this.setState({loading: false});
+            this.props.history.push('/badges');
         } catch (error) {
             this.setState({loading: false, error: error});
         }
     };
 
-
     render(){
+        if(this.state.loading){
+            return <PageLoading />;
+        }
+
         return (
         <React.Fragment>
             <div className="BadgeEdit__hero">
-                <img className="BadgeEdit__hero-image img-fluid" src={header} alt="logo" />
+                <img 
+                 className="BadgeEdit__hero-image img-fluid" 
+                 src={header} 
+                 alt="logo" 
+                />
             </div>
             <div className="container">
                 <div className="row">
@@ -55,16 +80,18 @@ class BadgeEdit extends React.Component {
                         />
                     </div>
                     <div className="col-6">
-                        <BadgeForm 
+                        <h1>Edit Attendant</h1>
+                        <BadgeForm
                             onChange={this.handleChange}
                             onSubmit={this.handleSubmit}
                             formValues={this.state.form}
+                            error={this.state.error}
                         />
                     </div>
                 </div>
             </div>
         </React.Fragment>
-        )
+        );
     }
 }
 

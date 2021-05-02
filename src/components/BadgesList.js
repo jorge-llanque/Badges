@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import { Link } from "react-router-dom";
 import './styles/BadgesList.css'
+import Gravatar from "./Gravatar";
 
-class BadgesListItem extends React.Component {
+class BadgesListItem extends Component {
     render() {
       return (
         <div className="BadgesListItem">
-          
+          <Gravatar 
             className="BadgesListItem__avatar"
             email={this.props.badge.email}
-          
-  
+          />          
           <div>
             <strong>
               {this.props.badge.firstName} {this.props.badge.lastName}
@@ -30,30 +30,30 @@ class BadgesList extends Component {
             return (
                 <div>
                     <h3>No badges were found :-(</h3>
+                    <Link className="btn btn-primary" to="/badges/new" >
+                        Create new badge
+                    </Link>
                 </div>
-            )
+            );
         }
         return (
-            <ul className="list-unstyled">
-                {this.props.badges.map( badge => {
-                    return(
-                        <div className="card-badges">
+            <div className="BadgesList">
+                <ul className="list-unstyled">
+                    {this.props.badges.map( badge => {
+                        return(
                             <li key={badge.id}>
                                 <Link
                                     className="text-reset text-decoration-none"
-                                    to={`/badges/${badge.id}/id`}
+                                    to={`/badges/${badge.id}`}
                                 >
                                     <BadgesListItem badge={badge} />
                                 </Link>
-                                    <p>{badge.firstName} {badge.lastName}</p>
-                                    <p>{badge.twitter}</p>
-                                    <p>{badge.jobTitle}</p>
                             </li>
-                        </div>
-                    )
-                })}
-            </ul>
-        )
+                        );
+                    })}
+                </ul>
+            </div>
+        );
     }
 }
 export default BadgesList
