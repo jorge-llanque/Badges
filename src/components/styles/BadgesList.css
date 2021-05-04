@@ -14,3 +14,11 @@
     border: 1px solid #43B1EE;
     margin-bottom: 5px;
 }
+.BadgesList__list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.badge {
+    margin-bottom: 10px;
+}

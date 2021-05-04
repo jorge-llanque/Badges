@@ -1,5 +1,5 @@
 import React from "react";
-
+import './styles/BadgeForm.css'
 class BadgeForm extends React.Component {
     // state = {};
     // handleChange = e => {
@@ -19,7 +19,7 @@ class BadgeForm extends React.Component {
     //   };
     render(){
         return (
-            <div>
+            <div className="Badge__form">
                 <form onSubmit={this.props.onSubmit}>
                     <div className="form-group">
                         <label>First Name</label>

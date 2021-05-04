@@ -16,7 +16,7 @@
     top: 10rem;
     background-color: #ffffff;
     padding: 1rem;
-    width: 400px;
+    width: 300px;
   }
   
   .Modal__close-button {
@@ -27,3 +27,9 @@
     background-color: #F5F5F5;
     padding: 0.5rem 1rem;
   }
+
+@media screen and (min-width: 768px){
+  .Modal__container {
+    width: 400px;
+  }
+}

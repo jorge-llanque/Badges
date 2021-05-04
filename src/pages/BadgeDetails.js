@@ -23,38 +23,33 @@ export default function BadgeDetails(props){
                 </div>
             </div>
 
-            <div className="container">
-                <div className="row">
-                    <div className="col">
-                        <Badge
-                         firstName={badge.firstName}
-                         lastName={badge.lastName}
-                         email={badge.email}
-                         twitter={badge.twitter}
-                         jobTitle={badge.jobTitle}
-                        />
+            <div className="BadgeDetails__container">
+                <div className="BadgeDetails__badge">
+                    <Badge
+                     firstName={badge.firstName}
+                     lastName={badge.lastName}
+                     email={badge.email}
+                     twitter={badge.twitter}
+                     jobTitle={badge.jobTitle}
+                    />
+                </div>
+                <div className="BadgeDetails__actions">
+                    <h2>Actions</h2>
+                    <div>
+                        <Link
+                         className="btn btn-primary mb-4"
+                         to={`/badges/${badge.id}/edit`}
+                        >
+                        Edit
+                        </Link>
                     </div>
-                    <div className="col">
-                        <h2>Actions</h2>
-                        <div>
-                            <div>
-                                <Link
-                                 className="btn btn-primary mb-4"
-                                 to={`/badges/${badge.id}/edit`}
-                                >
-                                Edit
-                                </Link>
-                            </div>
-
-                            <div>
-                                <button onClick={props.onOpenModal} className="btn btn-danger">Delete</button>
-                                <DeleteBadgeModal 
-                                isOpen={props.modalIsOpen} 
-                                onClose={props.onCloseModal}
-                                onDeleteBadge={props.onDeleteBadge}
-                                />
-                            </div>
-                        </div>
+                    <div>
+                        <button onClick={props.onOpenModal} className="btn btn-danger">Delete</button>
+                        <DeleteBadgeModal 
+                        isOpen={props.modalIsOpen} 
+                        onClose={props.onCloseModal}
+                        onDeleteBadge={props.onDeleteBadge}
+                        />
                     </div>
                 </div>
             </div>

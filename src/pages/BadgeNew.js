@@ -51,9 +51,8 @@ class BadgeNew extends React.Component {
             <div className="BadgeNew__hero">
                 <img className="BadgeNew__hero-image img-fluid" src={header} alt="logo" />
             </div>
-            <div className="container">
-                <div className="row">
-                    <div className="col-6">
+            <div className="BadgeNew__container">
+                    <div className="BadgeNew__badge">
                         <Badge 
                             firstName={this.state.form.firstName || "First_name"}
                             lastName={this.state.form.lastName || "Last_name"}
@@ -63,7 +62,7 @@ class BadgeNew extends React.Component {
                             avatarUrl="https://www.gravatar.com/avatar/21594ed15d68ace3965642162f8d2e84?d=identicon"
                         />
                     </div>
-                    <div className="BadgeNew__form col-6">
+                    <div className="BadgeNew__form">
                         <h1>New Attendant</h1>
                         <BadgeForm 
                           onChange={this.handleChange}
@@ -72,7 +71,6 @@ class BadgeNew extends React.Component {
                           error={this.state.error}
                         />
                     </div>
-                </div>
             </div>
         </React.Fragment>
         );

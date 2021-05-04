@@ -16,13 +16,13 @@ class Badge extends React.Component {
                     <span>#06521</span>
                 </div>
                 <div className="badge_container">
-                    <div class="layer"></div>
-                    <div class="layer"></div>
-                    <div class="layer"></div>
-                    <div class="layer"></div>
-                    <div class="layer"></div>
-                    <div class="layer"></div>
-                    <div class="layer"></div>
+                    <div className="layer"></div>
+                    <div className="layer"></div>
+                    <div className="layer"></div>
+                    <div className="layer"></div>
+                    <div className="layer"></div>
+                    <div className="layer"></div>
+                    <div className="layer"></div>
                     <div className="badge_section-name">
                         <div className="image-back">
                         <Gravatar className="badge_avatar" email={this.props.email} alt="Avatar" />

@@ -2,24 +2,61 @@ import React, { Component } from 'react'
 import { Link } from "react-router-dom";
 import './styles/BadgesList.css'
 import Gravatar from "./Gravatar";
+import confLogo from "../images/logo.png";
+
+// class BadgesListItem extends Component {
+//     render() {
+//       return (
+//         <div className="BadgesListItem">
+//           <Gravatar 
+//             className="BadgesListItem__avatar"
+//             email={this.props.badge.email}
+//           />          
+//           <div>
+//             <strong>
+//               {this.props.badge.firstName} {this.props.badge.lastName}
+//             </strong>
+//             <br />@{this.props.badge.twitter}
+//             <br />
+//             {this.props.badge.jobTitle}
+//           </div>
+//         </div>
+//       );
+//    }
+// }
 
 class BadgesListItem extends Component {
     render() {
       return (
-        <div className="BadgesListItem">
-          <Gravatar 
-            className="BadgesListItem__avatar"
-            email={this.props.badge.email}
-          />          
-          <div>
-            <strong>
-              {this.props.badge.firstName} {this.props.badge.lastName}
-            </strong>
-            <br />@{this.props.badge.twitter}
-            <br />
-            {this.props.badge.jobTitle}
-          </div>
-        </div>
+        <div className="badge">
+                <div className="badge_header">
+                    <img src={confLogo} alt="Logo de la conferencia" />
+                    <div className="hole"></div>
+                    <span>#06521</span>
+                </div>
+                <div className="badge_container">
+                    <div className="layer"></div>
+                    <div className="layer"></div>
+                    <div className="layer"></div>
+                    <div className="layer"></div>
+                    <div className="layer"></div>
+                    <div className="layer"></div>
+                    <div className="layer"></div>
+                    <div className="badge_section-name">
+                        <div className="image-back">
+                        <Gravatar className="badge_avatar" email={this.props.badge.email} alt="Avatar" />
+                        </div>
+                        <h1>{this.props.badge.firstName}<br/>{this.props.badge.lastName}</h1>
+                    </div>
+                <div className="badge_section-info">
+                    <h3>{this.props.badge.jobTitle}</h3>
+                    <span>@{this.props.badge.twitter}</span>
+                </div>
+                <div className="badge_footer">
+                    #Techconf
+                </div>
+                </div>
+            </div>
       );
    }
 }
@@ -80,20 +117,22 @@ function BadgesList(props) {
                 />
             </div>
 
-            <ul className="list-unstyled">
-                {filteredBadges.map( badge => {
-                    return(
-                        <li key={badge.id}>
-                            <Link
-                                className="text-reset text-decoration-none"
-                                to={`/badges/${badge.id}`}
-                            >
-                                <BadgesListItem badge={badge} />
-                            </Link>
-                        </li>
-                    );
-                })}
-            </ul>
+            <div className="BadgesList__list">
+                <ul className="list-unstyled">
+                    {filteredBadges.map( badge => {
+                        return(
+                            <li key={badge.id}>
+                                <Link
+                                    className="text-reset text-decoration-none"
+                                    to={`/badges/${badge.id}`}
+                                >
+                                    <BadgesListItem badge={badge} />
+                                </Link>
+                            </li>
+                        );
+                    })}
+                </ul>
+            </div>    
         </div>
     );
 }

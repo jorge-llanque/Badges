@@ -1,4 +1,11 @@
+.BadgeEdit__container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .BadgeEdit__hero {
+  display: none;
   width: 100%;
   padding: 2rem 0;
   background: url('../../images/stars.svg'), #1B1B25;
@@ -9,4 +16,19 @@
 
 .BadgeEdit__hero-image {
 max-height: 100px;
+}
+.BadgeEdit__form h1 {
+  font-size: 25px;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px){
+  .BadgeEdit__container{
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+  .BadgeEdit__badge {
+    margin-top: 35px;
+  }
 }

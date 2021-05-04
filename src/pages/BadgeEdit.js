@@ -67,27 +67,25 @@ class BadgeEdit extends React.Component {
                  alt="logo" 
                 />
             </div>
-            <div className="container">
-                <div className="row">
-                    <div className="col-6">
-                        <Badge 
-                            firstName={this.state.form.firstName || "First_name"}
-                            lastName={this.state.form.lastName || "Last_name"}
-                            jobTitle={this.state.form.jobTitle || "Job_title"}
-                            twitter={this.state.form.twitter || "Twitter_nick"}
-                            email={this.state.form.email || 'EMAIL'}
-                            avatarUrl="https://www.gravatar.com/avatar/21594ed15d68ace3965642162f8d2e84?d=identicon"
-                        />
-                    </div>
-                    <div className="col-6">
-                        <h1>Edit Attendant</h1>
-                        <BadgeForm
-                            onChange={this.handleChange}
-                            onSubmit={this.handleSubmit}
-                            formValues={this.state.form}
-                            error={this.state.error}
-                        />
-                    </div>
+            <div className="BadgeEdit__container">
+                <div className="BadgeEdit__badge">
+                    <Badge 
+                        firstName={this.state.form.firstName || "First_name"}
+                        lastName={this.state.form.lastName || "Last_name"}
+                        jobTitle={this.state.form.jobTitle || "Job_title"}
+                        twitter={this.state.form.twitter || "Twitter_nick"}
+                        email={this.state.form.email || 'EMAIL'}
+                        avatarUrl="https://www.gravatar.com/avatar/21594ed15d68ace3965642162f8d2e84?d=identicon"
+                    />
+                </div>
+                <div className="BadgeEdit__form">
+                    <h1>Edit Attendant</h1>
+                    <BadgeForm
+                        onChange={this.handleChange}
+                        onSubmit={this.handleSubmit}
+                        formValues={this.state.form}
+                        error={this.state.error}
+                    />
                 </div>
             </div>
         </React.Fragment>
