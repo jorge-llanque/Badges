@@ -37,21 +37,21 @@ a.link-unstyled:hover {
 .btn.btn-primary {
   text-transform: uppercase;
   color: #fff;
-  background-color: #43B1EE;
-  border: 2px solid #fff;
+  background-color: #41A9EA;
   border-radius: 5px;
   font-weight: bold;
+  border: none;
 }
 
 .btn.btn-primary:not(:disabled):not(.disabled):hover {
   color: #fff;
-  background-color: #0095e6;
+  background-color: #41A9EA;
   border-color: #fff;
 }
 
 .btn.btn-primary:not(:disabled):not(.disabled):active {
   color: #fff;
-  background-color: #0095e6;
+  background-color: #41A9EA;
   border-color: #fff;
 }
 

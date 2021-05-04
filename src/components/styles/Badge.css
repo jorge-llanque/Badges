@@ -4,7 +4,7 @@
     background: #000;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     border-radius: 15px;
-    border: 5px solid #BBFF00;
+    border: 5px solid #41A9EA;
     overflow: hidden;
   }
   
@@ -22,7 +22,7 @@
     background-color: #F4F4F7;
     width: 45px;
     height: 15px;
-    border: 3px solid #BBFF00;
+    border: 3px solid #41A9EA;
     border-radius: 5px;
   }
   .badge_header span {
@@ -141,7 +141,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #98ca3f;
+    color: #41A9EA;
     font-weight: bold;
     font-style: italic;
   }

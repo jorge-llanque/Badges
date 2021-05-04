@@ -1,6 +1,15 @@
 .Badge__form {
     width: 300px;
-    padding: 5px;
-    border-radius: 10px;
-    background-color: #cee5f8;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #393E47;
+}
+.Badge__form .form-group label {
+    color: #41A9EA;
+}
+.Badge__form .btn {
+    width: 85px;
+    padding: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }

@@ -27,14 +27,19 @@
   }
 
   .Badges__buttons {
+    margin-top: 10px;
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 1rem;
   }
   .Badges__buttons .btn {
-    font-size: 10px;
-    width: max-content;
+    font-size: 12px;
+    width: 100px;
+    height: 35px;
     letter-spacing: 1px;
+    padding: 0;
+    padding-top: 5px;
+    text-align: center;
+
   }
 
   @media screen and (min-width: 768px){

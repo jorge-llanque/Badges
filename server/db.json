@@ -1,15 +1,6 @@
 {
   "badges": [
     {
-      "id": "a6aeca9b-a7c1-45d2-b970-0121c682402a",
-      "firstName": "Kelly",
-      "lastName": "Corkery",
-      "email": "Van_Schimmel@yahoo.com",
-      "jobTitle": "Dynamic Tactics Liaison",
-      "twitter": "KellyCorkery06275-3676",
-      "avatarUrl": "https://www.gravatar.com/avatar/00e35de53a06a655fe5b6ac8b96bdb84?d=identicon"
-    },
-    {
       "firstName": "Carolynn",
       "lastName": "Kaufman",
       "email": "carolynn@example.com",
@@ -24,14 +15,6 @@
       "jobTitle": "Super Dog",
       "twitter": "snoopysuperdog",
       "id": "Tab9I7W"
-    },
-    {
-      "firstName": "Manuel",
-      "lastName": "Quiñonez",
-      "email": "manny2007q@example.com",
-      "jobTitle": "Productor de Cine",
-      "twitter": "mannyfilms1",
-      "id": "n8SkH8I"
     },
     {
       "firstName": "María José",
@@ -136,6 +119,14 @@
       "jobTitle": "",
       "twitter": "",
       "id": "dPYZYrQ"
+    },
+    {
+      "firstName": "",
+      "lastName": "",
+      "email": "",
+      "jobTitle": "",
+      "twitter": "",
+      "id": "CtZBVlf"
     }
   ]
 }
