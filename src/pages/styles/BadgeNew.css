@@ -1,4 +1,11 @@
+.container .row {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
 .BadgeNew__hero {
+    display: none;
     width: 100%;
     padding: 2rem 0;
     background: url('../../images/stars.svg'), #1B1B25;
@@ -9,4 +16,8 @@
 
 .BadgeNew__hero-image {
   max-height: 100px;
+}
+.BadgeNew__form h1 {
+  margin-top: 10px;
+  font-size: 20px;
 }

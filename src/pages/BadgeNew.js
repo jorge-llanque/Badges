@@ -63,7 +63,7 @@ class BadgeNew extends React.Component {
                             avatarUrl="https://www.gravatar.com/avatar/21594ed15d68ace3965642162f8d2e84?d=identicon"
                         />
                     </div>
-                    <div className="col-6">
+                    <div className="BadgeNew__form col-6">
                         <h1>New Attendant</h1>
                         <BadgeForm 
                           onChange={this.handleChange}

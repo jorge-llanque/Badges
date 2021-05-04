@@ -2,7 +2,8 @@ import React from 'react'
 import Modal from "./Modal";
 
 export default function DeleteBadgeModal(props) {
-    return <Modal isOpen={props.isOpen} onClose={props.onClose} >
+    return (
+    <Modal isOpen={props.isOpen} onClose={props.onClose} >
         <div className="DeleteBadgeModal">
             <h1>Are you sure?</h1>
             <p>You are about to delete this badge.</p>
@@ -14,4 +15,5 @@ export default function DeleteBadgeModal(props) {
 
         </div>
     </Modal>
+    );
 }

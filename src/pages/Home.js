@@ -11,12 +11,6 @@ export default class Home extends Component {
         <div className="container">
           <div className="row">
             <div className="Home__col col-12 col-md-4">
-              <img
-                src={logo}
-                alt="Platzi Conf Logo"
-                className="img-fluid mb-2"
-              />
-
               <h1>Badge Management System</h1>
               <Link className="btn btn-primary" to="/badges">
                 Start

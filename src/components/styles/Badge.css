@@ -1,44 +1,143 @@
 .badge {
-    background: #ffffff;
+    height: 200px;
+    width: 300px;
+    background: #000;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-    border-radius: 8px 8px 8px 8px;
+    border-radius: 15px;
+    border: 5px solid #BBFF00;
     overflow: hidden;
-    height: 380px;
   }
   
   .badge_header {
-    padding: 0.5rem 0;
-    height: 80px;
-    background: #1b1b25;
+    width: 100%;
+    height: 20%;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
   }
+  .badge_header img {
+    width: 60px;
+  }
+  .badge_header .hole {
+    background-color: #F4F4F7;
+    width: 45px;
+    height: 15px;
+    border: 3px solid #BBFF00;
+    border-radius: 5px;
+  }
+  .badge_header span {
+    color: #FFFF;
+  }
+  .badge_container {
+    position: relative;
+    height: 80%;
+    width: 100%;
+    border-top: 3px solid #1A1D1B;
+    overflow: hidden;
+  }
+  .badge_container .layer:nth-child(1) {
+    position: absolute;
+    top: 5px;
+    left: 48px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #1A1D1B;
+  }
+  .badge_container .layer:nth-child(2){
+    position: absolute;
+    top: -15px;
+    left: 28px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #1A1D1B;
+  }
+  .badge_container .layer:nth-child(3){
+    position: absolute;
+    top: -45px;
+    left: 0px;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid #1A1D1B;
+  }
+  .badge_container .layer:nth-child(4){
+    position: absolute;
+    top: -80px;
+    left: -30px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid #1A1D1B;
+  }
+  .badge_container .layer:nth-child(5){
+    position: absolute;
+    top: -115px;
+    left: -60px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 4px solid #1A1D1B;
+  }
+  .badge_container .layer:nth-child(6){
+    display: none;
+    position: absolute;
+    top: -340px;
+    left: -190px;
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    border: 4px solid #1A1D1B;
+  }
+  .badge_container .layer:nth-child(7){
+    display: none;
+    position: absolute;
+    top: -380px;
+    left: -200px;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    border: 4px solid #1A1D1B;
+  }
+
   
   .badge_section-name {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem 0;
   }
+  .badge_section-name h1 {
+    width: 87px;
+    font-size: 20px;
+    color: #FFFF;
+  }
+  .badge_avatar {
+    border-radius: 50%;
+    margin-right: 1rem;
+    width: 50px;
+    height: 50px;
+  }
   
   .badge_section-info {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem 0;
-    background: #f4f4f7;
   }
-  
-  .badge_avatar {
-    border-radius: 50%;
-    margin-right: 1rem;
-    width: 120px;
-    height: 120px;
+  .badge_section-info h3 {
+    font-size: 15px;
+    color: #FFFF;
   }
-  
+  .badge_section-info span {
+    font-size: 10px;
+    color: #FFFF;
+  }
   .badge_footer {
-    height: 54px;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;

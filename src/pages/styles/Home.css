@@ -4,9 +4,7 @@
     min-height: calc(100vh - 60px);
     background: url('../../images/stars.svg'), #1B1B25;
     background-repeat: repeat;
-  
     color: #ffffff;
-  
     display: flex;
     align-items: center;
   }
@@ -17,9 +15,21 @@
     justify-content: center;
     align-items: center;
   }
+  .Home__col img {
+    display: none;
+  }
+  .Home__col .btn {
+    margin-top: 20px;
+  }
   
   @media screen and (min-width: 768px) {
     .Home__col {
       align-items: flex-start;
+    }
+    .Home__col img {
+      display: inline-block;
+    }
+    .Home__col h1 {
+      font-size: 50px;
     }
   }

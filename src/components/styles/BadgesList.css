@@ -4,5 +4,13 @@
     padding: 10px;
     margin: 10px;
     background-color: antiquewhite;
+}
 
+.form-group input {
+    height: 30px;
+}
+
+.BadgesListItem {
+    border: 1px solid #43B1EE;
+    margin-bottom: 5px;
 }
