@@ -4,12 +4,13 @@ import '.././global.css'
 import './styles/Badge.css';
 import Gravatar from './Gravatar';
 import confLogo from "../images/logo.png";
-
+import ParticleComponent from "./ParticleComponent";
 
 class Badge extends React.Component {
     render(){   
         return (
             <div className="badge">
+                <ParticleComponent />
                 <div className="badge_header">
                     <img src={confLogo} alt="Logo de la conferencia" />
                     <div className="hole"></div>

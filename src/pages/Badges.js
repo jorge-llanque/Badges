@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import './styles/Badges.css';
-import confLogo from "../images/logo.png";
 import BadgesList from '../components/BadgesList';
 import PageLoading from "../components/PageLoading";
 import PageError from "../components/PageError";
 import MiniLoader from "../components/MiniLoader";
 import api from "../api";
+import ParticleComponent from "../components/ParticleComponent";
 
 class Badges extends React.Component {
 
@@ -95,15 +95,11 @@ class Badges extends React.Component {
                 <div className="Badges">
                     <div className="Badges__hero">
                         <div className="Badges__container">
-                            <img
-                             className="Badges_conf-logo"
-                             src={confLogo}
-                             alt="Conf logo"
-                            />
+                        <ParticleComponent className="Home__ParticleComponent" />
                         </div>
                     </div>
                 </div>
-                <div className="Badges__container">
+                <div className="Badges__container-two">
                     <div className="Badges__buttons">
                         <Link to="/badges/new" className="btn btn-primary">New Badge</Link>
                     </div>

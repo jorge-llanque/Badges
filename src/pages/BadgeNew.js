@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles/BadgeNew.css";
-import header from "../images/badge-header.svg";
+import ParticleComponent from "../components/ParticleComponent";
 import Badge from "../components/Badge";
 import BadgeForm from "../components/BadgeForm";
 import PageLoading from "../components/PageLoading";
@@ -49,7 +49,7 @@ class BadgeNew extends React.Component {
         return (
         <React.Fragment>
             <div className="BadgeNew__hero">
-                <img className="BadgeNew__hero-image img-fluid" src={header} alt="logo" />
+                <ParticleComponent />
             </div>
             <div className="BadgeNew__container">
                     <div className="BadgeNew__badge">

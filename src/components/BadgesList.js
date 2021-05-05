@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import './styles/BadgesList.css'
 import Gravatar from "./Gravatar";
 import confLogo from "../images/logo.png";
+import ParticleComponent from "./ParticleComponent";
 
 // class BadgesListItem extends Component {
 //     render() {
@@ -29,34 +30,35 @@ class BadgesListItem extends Component {
     render() {
       return (
         <div className="badge">
-                <div className="badge_header">
-                    <img src={confLogo} alt="Logo de la conferencia" />
-                    <div className="hole"></div>
-                    <span>#06521</span>
-                </div>
-                <div className="badge_container">
-                    <div className="layer"></div>
-                    <div className="layer"></div>
-                    <div className="layer"></div>
-                    <div className="layer"></div>
-                    <div className="layer"></div>
-                    <div className="layer"></div>
-                    <div className="layer"></div>
-                    <div className="badge_section-name">
-                        <div className="image-back">
-                        <Gravatar className="badge_avatar" email={this.props.badge.email} alt="Avatar" />
-                        </div>
-                        <h1>{this.props.badge.firstName}<br/>{this.props.badge.lastName}</h1>
-                    </div>
-                <div className="badge_section-info">
-                    <h3>{this.props.badge.jobTitle}</h3>
-                    <span>@{this.props.badge.twitter}</span>
-                </div>
-                <div className="badge_footer">
-                    #Techconf
-                </div>
-                </div>
+            <ParticleComponent />
+            <div className="badge_header">
+                <img src={confLogo} alt="Logo de la conferencia" />
+                <div className="hole"></div>
+                <span>#06521</span>
             </div>
+            <div className="badge_container">
+                <div className="layer"></div>
+                <div className="layer"></div>
+                <div className="layer"></div>
+                <div className="layer"></div>
+                <div className="layer"></div>
+                <div className="layer"></div>
+                <div className="layer"></div>
+                <div className="badge_section-name">
+                    <div className="image-back">
+                    <Gravatar className="badge_avatar" email={this.props.badge.email} alt="Avatar" />
+                    </div>
+                    <h1>{this.props.badge.firstName}<br/>{this.props.badge.lastName}</h1>
+                </div>
+            <div className="badge_section-info">
+                <h3>{this.props.badge.jobTitle}</h3>
+                <span>@{this.props.badge.twitter}</span>
+            </div>
+            <div className="badge_footer">
+                #Techconf
+            </div>
+            </div>
+        </div>
       );
    }
 }

@@ -10,7 +10,7 @@ export default function DeleteBadgeModal(props) {
 
             <div>
                 <button onClick={props.onDeleteBadge} className="btn btn-danger mr-4">Delete</button>
-                <button onClick={props.onClose} className="btn btn-primary">Cancel</button>
+                <button onClick={props.onClose} className="btn"><strong>Cancel</strong></button>
             </div>
 
         </div>

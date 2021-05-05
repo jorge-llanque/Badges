@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import ParticleComponent from "../components/ParticleComponent";
 import './styles/Home.css';
-import logo from '../images/logo.png';
-
+import graphsLogo from "../images/gr.svg";
 
 export default class Home extends Component {
   render() {
@@ -21,7 +20,7 @@ export default class Home extends Component {
 
               <div className="Home__col d-none d-md-block col-md-8">
                 <img
-                  src={logo}
+                  src={graphsLogo}
                   alt="Astronauts"
                   className="img-fluid p-4"
                 />
