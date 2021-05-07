@@ -23,3 +23,12 @@
     margin-bottom: 10px;
     position: relative;
 }
+@media screen and (min-width: 768px){
+    .BadgesList__each {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 0;
+        list-style: none;
+    }
+}

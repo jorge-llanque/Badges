@@ -1,9 +1,7 @@
 .BadgeEdit__container {
   position: absolute;
   margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  left: calc(50% - 150px);
 }
 .BadgeEdit__hero {
   position: relative;
@@ -26,14 +24,16 @@ max-height: 100px;
 
 @media screen and (min-width: 768px){
   .BadgeEdit__container{
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-around;
+    display: flex;
+    left: calc(50% - 325px);
   }
   .BadgeEdit__hero {
     display: inline-block;
   }
   .BadgeEdit__badge {
-    margin-top: 35px;
+    margin-top: 40px;
+  }
+  .BadgeEdit__form {
+    margin-left: 40px;
   }
 }

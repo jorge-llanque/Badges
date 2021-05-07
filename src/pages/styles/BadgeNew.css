@@ -1,16 +1,14 @@
 .BadgeNew__container{
   position: absolute;
   margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  left: calc(50% - 150px);
 }
 
 .BadgeNew__hero {
     position: relative;
     display: none;
     width: 100%;
-    height: 150px;
+    height: 100px;
     padding: 2rem 0;
     background-color: #000;
     margin-bottom: 1rem;
@@ -27,15 +25,19 @@
 }
 
 @media screen and (min-width: 768px){
+  .BadgeNew__hero {
+    display: inline-block;
+    height: 130px;
+  }
   .BadgeNew__container {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-around;
+    display: flex;
+    left: calc(50% - 325px);
   }
   .BadgeNew__badge {
     margin-top: 40px;
   }
-  .BadgeNew__hero {
-    display: inline-block;
+  .BadgeNew__form {
+    margin-left: 40px;
   }
+  
 }

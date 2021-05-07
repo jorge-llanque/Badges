@@ -101,10 +101,11 @@ class Badges extends React.Component {
                 </div>
                 <div className="Badges__container-two">
                     <div className="Badges__buttons">
-                        <Link to="/badges/new" className="btn btn-primary">New Badge</Link>
+                        <Link to="/badges/new" className="btn">New Badge</Link>
                     </div>
 
                     <BadgesList badges={this.state.data} />
+                    
                     {this.state.loading && <MiniLoader />}
                 </div>
             </React.Fragment>

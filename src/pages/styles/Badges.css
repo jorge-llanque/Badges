@@ -17,7 +17,6 @@
   }
   .Badges__container, .Badges__container-two {
     width: 100%;
-    max-width: 580px;
     margin: 0 auto;
     padding: 0 1rem;
   }
@@ -31,18 +30,31 @@
     justify-content: flex-end;
   }
   .Badges__buttons .btn {
+    background-color: #41A9EA;
+    color: #fff;
     font-size: 12px;
-    width: 100px;
-    height: 35px;
+    width: 80px;
+    height: 30px;
     letter-spacing: 1px;
     padding: 0;
     padding-top: 5px;
     text-align: center;
-
+    font-weight: bold;
   }
 
   @media screen and (min-width: 768px){
     .Badges__hero {
       display: inline-block;
+      height: 130px;
+    }
+    .Badges__buttons .btn {
+      font-size: 15px;
+      width: 100px;
+      height: 35px;
+      letter-spacing: 1px;
+      padding: 0;
+      padding-top: 5px;
+      text-align: center;
+      font-weight: bold;
     }
   }

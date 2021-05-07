@@ -120,7 +120,7 @@ function BadgesList(props) {
             </div>
 
             <div className="BadgesList__list">
-                <ul className="list-unstyled">
+                <ul className="BadgesList__each">
                     {filteredBadges.map( badge => {
                         return(
                             <li key={badge.id}>
