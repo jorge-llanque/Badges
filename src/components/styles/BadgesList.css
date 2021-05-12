@@ -13,6 +13,7 @@
 .BadgesListItem {
     border: 1px solid #43B1EE;
     margin-bottom: 5px;
+    
 }
 .BadgesList__list{
     display: flex;
@@ -23,7 +24,13 @@
     margin-bottom: 10px;
     position: relative;
 }
+.BadgesList__each {
+    list-style: none;
+    padding: 0;
+}
+
 @media screen and (min-width: 768px){
+
     .BadgesList__each {
         display: flex;
         flex-wrap: wrap;

@@ -56,7 +56,7 @@ class Badges extends React.Component {
     // componentWillUnmount(){
     //     clearTimeout(this.timeoutId)
     // }
-
+    _isMounted = false;
     state = {
         loading: true,
         error: null,
@@ -65,22 +65,27 @@ class Badges extends React.Component {
 
     componentDidMount(){
         this.fetchData();
-        this.intervalId = setInterval(this.fetchData, 5000);
     }
 
     componentWillUnmount(){
-        clearInterval(this.intervalId);
+        this._isMounted = false;
     }
 
     fetchData = async () => {
-        this.setState({loading: true, error: null});
-        try {
-            const data = await api.badges.list();
-            this.setState({loading: false, data: data});
-        } catch (error) {
-            this.setState({loading: false, error: error});
-        }
+            this.setState({loading: true, error: null});
+            try {
+                this._isMounted = true;
+                const data = await api.badges.list();
+                
+                if(this._isMounted){
+                    this.setState({loading: false, data: data});
+                }
+            } catch (error) {
+                this.setState({loading: false, error: error});
+            }
     };
+
+    
     
     render(){
         if(this.state.loading === true && !this.state.data){

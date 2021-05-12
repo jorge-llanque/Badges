@@ -1,18 +1,20 @@
 import React from "react";
 import Particles from "react-particles-js";
 
-export default () => (
+const fn = () => (
   <div
     style={{
       position: "absolute",
       top: 0,
       left: 0,
+	  bottom: 0,
+	  right: 0,
       width: "100%",
 	  height: "100%"
     }}
   >
     <Particles
-    height="100%"
+	height= "calc(100vh - 60px)"
     params={{
 	    "particles": {
 	        "number": {
@@ -65,4 +67,5 @@ export default () => (
 	    }
 	}} />
   </div>
-);
+	);
+export default fn;

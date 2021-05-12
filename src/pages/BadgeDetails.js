@@ -8,6 +8,7 @@ import DeleteBadgeModal from "../components/DeleteBadgeModal";
 
 export default function BadgeDetails(props){
     const badge = props.badge;
+
     return (
         <div>
             <div className="BadgeDetails__hero">

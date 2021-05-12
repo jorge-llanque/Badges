@@ -17,7 +17,8 @@
   }
   .Badges__container, .Badges__container-two {
     width: 100%;
-    margin: 0 auto;
+    
+    /* max-width: 1024px; */
     padding: 0 1rem;
   }
   .Badges_conf-logo {
@@ -57,4 +58,17 @@
       text-align: center;
       font-weight: bold;
     }
+  }
+
+  @media screen and (min-width: 1024px){
+
+    .Badges__container-two {
+      max-width: 1024px;
+      left: calc(50% - 500px);
+    }
+/* 
+    .Badges__container, .Badges__container-two {
+      max-width: 1024px;
+      left: calc(50% - 400px);
+    }  */
   }
