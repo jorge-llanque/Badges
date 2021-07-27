@@ -10,7 +10,7 @@ export default class Home extends Component {
         <ParticleComponent className="Home__ParticleComponent" />
           <div className="container">
               <div className="Home__col">
-                <h1>Badge Management System</h1>
+                <h1>Badges Creator</h1>
                 <Link className="btn btn-primary" to="/badges">Start</Link>
               </div>
           </div>

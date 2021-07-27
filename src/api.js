@@ -24,8 +24,6 @@ async function callApi(endpoint, options = {}) {
 const api = {
   badges: {
     list() {
-      // throw new Error("Not found data");
-      // return []
       return callApi('/badges');
     },
     create(badge) {
@@ -43,7 +41,6 @@ const api = {
         body: JSON.stringify(updates),
       });
     },
-    // Lo hubiera llamado `delete`, pero `delete` es un keyword en JavaScript asi que no es buena idea :P
     remove(badgeId) {
       return callApi(`/badges/${badgeId}`, {
         method: 'DELETE',
