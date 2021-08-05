@@ -4,7 +4,7 @@ import Loader from "./Loader";
 
 export default function PageLoading() {
     return (
-        <div className="PageLoading">
+        <div className="PageLoading" data-testid="loading-element">
             <Loader />
         </div>
     );

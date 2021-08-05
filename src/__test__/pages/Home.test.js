@@ -14,6 +14,7 @@ describe('App', () => {
       render(<BrowserRouter><Home /></BrowserRouter>);
       const buttonClick = screen.getByRole('link', {name: 'Start'})
       fireEvent.click(buttonClick)
+      
       // await wwaitForElementToBeRemoved(
       //   () => () => queryByText('Badges Creator'),
       //   {timeout: 1000}
